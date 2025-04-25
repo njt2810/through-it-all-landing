@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Through It All Pte. Ltd.</title>
 
-    <!-- Tailwind CDN -->
+    <!-- Tailwind CSS (CDN) -->
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
       rel="stylesheet"
@@ -44,21 +44,21 @@
   </head>
 
   <body>
-    <!-- ─────────────── HEADER ─────────────── -->
+    <!-- ───────── HEADER ───────── -->
     <header class="fixed w-full bg-white header-shadow z-50">
       <div
-        class="container mx-auto px-6 py-3 flex items-center justify-between"
+        class="container mx-auto px-6 py-3 flex flex-col md:flex-row md:items-center"
       >
-        <!-- Logo -->
+        <!-- Logo (smaller on mobile) -->
         <img
           src="img/logo.png"
           alt="Through It All logo"
-          class="w-32 md:w-36 h-auto"
+          class="w-20 md:w-36 h-auto"
         />
 
-        <!-- Evenly-spaced nav with larger text -->
+        <!-- Nav: visible on all sizes -->
         <nav
-          class="hidden md:flex flex-1 justify-evenly ml-10 text-base md:text-2xl font-medium"
+          class="flex flex-col md:flex-row flex-1 justify-evenly text-xl md:text-2xl font-medium space-y-2 md:space-y-0 mt-4 md:mt-0"
         >
           <a href="#home" class="hover:text-gray-900">Home</a>
           <a href="#about" class="hover:text-gray-900">About</a>
@@ -70,8 +70,8 @@
       </div>
     </header>
 
-    <!-- ─────────────── HERO ─────────────── -->
-    <section id="home" class="pt-24 hero-gradient">
+    <!-- ───────── HERO ───────── -->
+    <section id="home" class="pt-36 md:pt-24 hero-gradient">
       <div
         class="container mx-auto px-6 py-16 md:py-24 flex flex-col md:flex-row items-center"
       >
@@ -98,7 +98,7 @@
       </div>
     </section>
 
-    <!-- ─────────────── ABOUT ─────────────── -->
+    <!-- ───────── ABOUT ───────── -->
     <section id="about" class="py-16 bg-white">
       <div class="container mx-auto px-6">
         <h2 class="text-3xl font-bold mb-12 text-center">About Us</h2>
@@ -113,20 +113,19 @@
           </p>
           <div class="bg-gray-100 p-6 rounded-lg mt-10">
             <p class="text-lg font-medium">
-              Currently attending Canton Fair 2025 (Phase&nbsp;3: 1 –
-              5&nbsp;May)
+              Currently attending Canton Fair 2025 (Phase 3: 1 – 5 May)
             </p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ─────────── PRODUCT CATEGORIES ─────────── -->
+    <!-- ───────── PRODUCT CATEGORIES ───────── -->
     <section id="categories" class="py-16 bg-gray-50">
       <div class="container mx-auto px-6">
         <h2 class="text-3xl font-bold mb-12 text-center">Product Categories</h2>
-
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Category cards (unchanged) -->
           <!-- Home & Kitchen -->
           <div
             class="category-card bg-white rounded-lg overflow-hidden shadow-md"
@@ -146,7 +145,6 @@
               </ul>
             </div>
           </div>
-
           <!-- Baby & Maternity -->
           <div
             class="category-card bg-white rounded-lg overflow-hidden shadow-md"
@@ -166,7 +164,6 @@
               </ul>
             </div>
           </div>
-
           <!-- Fashion Accessories -->
           <div
             class="category-card bg-white rounded-lg overflow-hidden shadow-md"
@@ -185,7 +182,6 @@
               </ul>
             </div>
           </div>
-
           <!-- Home Textiles -->
           <div
             class="category-card bg-white rounded-lg overflow-hidden shadow-md"
@@ -204,7 +200,6 @@
               </ul>
             </div>
           </div>
-
           <!-- Outdoor & Adventure -->
           <div
             class="category-card bg-white rounded-lg overflow-hidden shadow-md"
@@ -228,7 +223,7 @@
       </div>
     </section>
 
-    <!-- ─────────────── WHY PARTNER WITH US ─────────────── -->
+    <!-- ───────── WHY PARTNER WITH US ───────── -->
     <section id="why" class="py-16 bg-white">
       <div class="container mx-auto px-6">
         <h2 class="text-3xl font-bold mb-12 text-center">
@@ -237,7 +232,7 @@
         <div
           class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-5xl mx-auto"
         >
-          <!-- Card 1 -->
+          <!-- Four reason cards (unchanged) -->
           <div class="text-center">
             <div
               class="bg-gray-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"
@@ -262,7 +257,6 @@
             </p>
           </div>
 
-          <!-- Card 2 -->
           <div class="text-center">
             <div
               class="bg-gray-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"
@@ -285,7 +279,6 @@
             <p class="text-gray-700">Commitment to strict product standards</p>
           </div>
 
-          <!-- Card 3 -->
           <div class="text-center">
             <div
               class="bg-gray-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"
@@ -310,7 +303,6 @@
             </p>
           </div>
 
-          <!-- Card 4 -->
           <div class="text-center">
             <div
               class="bg-gray-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"
@@ -338,7 +330,7 @@
       </div>
     </section>
 
-    <!-- ─────────────── CONTACT ─────────────── -->
+    <!-- ───────── CONTACT ───────── -->
     <section id="contact" class="py-16 bg-gray-50">
       <div class="container mx-auto px-6">
         <h2 class="text-3xl font-bold mb-12 text-center">Contact Us</h2>
@@ -367,20 +359,20 @@
       </div>
     </section>
 
-    <!-- ─────────────── FOOTER ─────────────── -->
+    <!-- ───────── FOOTER ───────── -->
     <footer class="bg-black text-white">
       <div class="container mx-auto px-6 py-8">
         <div class="flex flex-col md:flex-row justify-between items-center">
-          <!-- Footer logo -->
+          <!-- Footer logo smaller on mobile -->
           <img
             src="img/logo-white.png"
             alt="Through It All logo"
-            class="w-28 h-auto mb-4 md:mb-0"
+            class="w-20 md:w-28 h-auto mb-4 md:mb-0"
           />
 
-          <!-- Evenly-spaced footer nav -->
+          <!-- Footer nav -->
           <nav
-            class="flex-1 md:flex justify-evenly space-y-4 md:space-y-0 text-base md:text-2xl"
+            class="flex flex-col md:flex-row flex-1 justify-evenly text-lg md:text-2xl font-medium space-y-2 md:space-y-0"
           >
             <a href="#home" class="hover:text-gray-300">Home</a>
             <a href="#about" class="hover:text-gray-300">About</a>
@@ -398,7 +390,7 @@
       </div>
     </footer>
 
-    <!-- ─────────────── SMOOTH SCROLL ─────────────── -->
+    <!-- ───────── SMOOTH SCROLL ───────── -->
     <script>
       document.querySelectorAll('a[href^="#"]').forEach((a) => {
         a.addEventListener("click", (e) => {
@@ -406,11 +398,7 @@
           if (href.length > 1) {
             e.preventDefault();
             const t = document.querySelector(href);
-            t &&
-              window.scrollTo({
-                top: t.offsetTop - 80,
-                behavior: "smooth",
-              });
+            t && window.scrollTo({ top: t.offsetTop - 80, behavior: "smooth" });
           }
         });
       });
