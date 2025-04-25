@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Through It All Pte. Ltd.</title>
 
-    <!-- Tailwind CSS (CDN) -->
+    <!-- Tailwind CDN -->
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
       rel="stylesheet"
@@ -49,16 +49,16 @@
       <div
         class="container mx-auto px-6 py-3 flex items-center justify-between"
       >
-        <!-- Logo only -->
+        <!-- Logo -->
         <img
           src="img/logo.png"
           alt="Through It All logo"
           class="w-32 md:w-36 h-auto"
         />
 
-        <!-- Evenly-spaced nav -->
+        <!-- Evenly-spaced nav with larger text -->
         <nav
-          class="hidden md:flex flex-1 justify-evenly ml-10 text-lg font-medium"
+          class="hidden md:flex flex-1 justify-evenly ml-10 text-base md:text-2xl font-medium"
         >
           <a href="#home" class="hover:text-gray-900">Home</a>
           <a href="#about" class="hover:text-gray-900">About</a>
@@ -125,6 +125,7 @@
     <section id="categories" class="py-16 bg-gray-50">
       <div class="container mx-auto px-6">
         <h2 class="text-3xl font-bold mb-12 text-center">Product Categories</h2>
+
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <!-- Home & Kitchen -->
           <div
@@ -145,6 +146,7 @@
               </ul>
             </div>
           </div>
+
           <!-- Baby & Maternity -->
           <div
             class="category-card bg-white rounded-lg overflow-hidden shadow-md"
@@ -164,6 +166,7 @@
               </ul>
             </div>
           </div>
+
           <!-- Fashion Accessories -->
           <div
             class="category-card bg-white rounded-lg overflow-hidden shadow-md"
@@ -182,6 +185,7 @@
               </ul>
             </div>
           </div>
+
           <!-- Home Textiles -->
           <div
             class="category-card bg-white rounded-lg overflow-hidden shadow-md"
@@ -200,6 +204,7 @@
               </ul>
             </div>
           </div>
+
           <!-- Outdoor & Adventure -->
           <div
             class="category-card bg-white rounded-lg overflow-hidden shadow-md"
@@ -256,6 +261,7 @@
               Products selected for market demand and trends
             </p>
           </div>
+
           <!-- Card 2 -->
           <div class="text-center">
             <div
@@ -278,6 +284,7 @@
             <h3 class="font-bold text-lg mb-2">Quality Assurance</h3>
             <p class="text-gray-700">Commitment to strict product standards</p>
           </div>
+
           <!-- Card 3 -->
           <div class="text-center">
             <div
@@ -302,6 +309,7 @@
               Streamlined supply chain &amp; logistics
             </p>
           </div>
+
           <!-- Card 4 -->
           <div class="text-center">
             <div
@@ -370,9 +378,9 @@
             class="w-28 h-auto mb-4 md:mb-0"
           />
 
-          <!-- Evenly spaced footer nav -->
+          <!-- Evenly-spaced footer nav -->
           <nav
-            class="flex-1 md:flex justify-evenly space-y-4 md:space-y-0 text-sm"
+            class="flex-1 md:flex justify-evenly space-y-4 md:space-y-0 text-base md:text-2xl"
           >
             <a href="#home" class="hover:text-gray-300">Home</a>
             <a href="#about" class="hover:text-gray-300">About</a>
@@ -392,13 +400,17 @@
 
     <!-- ─────────────── SMOOTH SCROLL ─────────────── -->
     <script>
-      document.querySelectorAll('a[href^=\"#\"]').forEach((a) => {
-        a.addEventListener(\"click\", (e) => {
-          const href = a.getAttribute(\"href\");
+      document.querySelectorAll('a[href^="#"]').forEach((a) => {
+        a.addEventListener("click", (e) => {
+          const href = a.getAttribute("href");
           if (href.length > 1) {
             e.preventDefault();
             const t = document.querySelector(href);
-            t && window.scrollTo({ top: t.offsetTop - 80, behavior: \"smooth\" });
+            t &&
+              window.scrollTo({
+                top: t.offsetTop - 80,
+                behavior: "smooth",
+              });
           }
         });
       });
