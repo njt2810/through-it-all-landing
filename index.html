@@ -45,9 +45,12 @@
 
   <body>
     <!-- ───────── HEADER ───────── -->
-    <header class="fixed w-full bg-white header-shadow z-50">
+    <header
+      class="fixed w-full bg-white header-shadow z-50"
+      x-data="{ open: false }"
+    >
       <div
-        class="container mx-auto px-6 py-3 flex flex-col md:flex-row md:items-center"
+        class="container mx-auto px-6 py-3 flex items-center justify-between relative"
       >
         <!-- Logo (smaller on mobile) -->
         <img
@@ -56,9 +59,9 @@
           class="w-20 md:w-36 h-auto"
         />
 
-        <!-- Nav: visible on all sizes -->
+        <!-- Desktop nav -->
         <nav
-          class="flex flex-col md:flex-row flex-1 justify-evenly text-xl md:text-2xl font-medium space-y-2 md:space-y-0 mt-4 md:mt-0"
+          class="hidden md:flex flex-1 justify-evenly text-xl md:text-2xl font-medium ml-10"
         >
           <a href="#home" class="hover:text-gray-900">Home</a>
           <a href="#about" class="hover:text-gray-900">About</a>
@@ -66,6 +69,60 @@
             >Product&nbsp;Categories</a
           >
           <a href="#contact" class="hover:text-gray-900">Contact</a>
+        </nav>
+
+        <!-- Hamburger button -->
+        <button
+          class="md:hidden focus:outline-none"
+          @click="open = !open"
+          aria-label="Toggle navigation"
+        >
+          <svg
+            x-show="!open"
+            class="w-8 h-8"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+          <svg
+            x-show="open"
+            x-cloak
+            class="w-8 h-8"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
+
+        <!-- Mobile dropdown nav -->
+        <nav
+          x-show="open"
+          x-cloak
+          x-transition
+          class="md:hidden absolute top-full left-0 w-full bg-white shadow-lg"
+        >
+          <ul class="flex flex-col space-y-4 py-4 px-6 text-xl font-medium">
+            <li><a href="#home" @click="open=false">Home</a></li>
+            <li><a href="#about" @click="open=false">About</a></li>
+            <li>
+              <a href="#categories" @click="open=false">Product Categories</a>
+            </li>
+            <li><a href="#contact" @click="open=false">Contact</a></li>
+          </ul>
         </nav>
       </div>
     </header>
@@ -125,7 +182,6 @@
       <div class="container mx-auto px-6">
         <h2 class="text-3xl font-bold mb-12 text-center">Product Categories</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <!-- Category cards (unchanged) -->
           <!-- Home & Kitchen -->
           <div
             class="category-card bg-white rounded-lg overflow-hidden shadow-md"
@@ -145,6 +201,7 @@
               </ul>
             </div>
           </div>
+
           <!-- Baby & Maternity -->
           <div
             class="category-card bg-white rounded-lg overflow-hidden shadow-md"
@@ -164,6 +221,7 @@
               </ul>
             </div>
           </div>
+
           <!-- Fashion Accessories -->
           <div
             class="category-card bg-white rounded-lg overflow-hidden shadow-md"
@@ -182,6 +240,7 @@
               </ul>
             </div>
           </div>
+
           <!-- Home Textiles -->
           <div
             class="category-card bg-white rounded-lg overflow-hidden shadow-md"
@@ -200,6 +259,7 @@
               </ul>
             </div>
           </div>
+
           <!-- Outdoor & Adventure -->
           <div
             class="category-card bg-white rounded-lg overflow-hidden shadow-md"
@@ -232,7 +292,7 @@
         <div
           class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-5xl mx-auto"
         >
-          <!-- Four reason cards (unchanged) -->
+          <!-- 4 cards (unchanged) -->
           <div class="text-center">
             <div
               class="bg-gray-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"
@@ -337,7 +397,6 @@
         <div
           class="max-w-4xl mx-auto bg-white rounded-lg shadow-lg overflow-hidden md:flex"
         >
-          <!-- QR -->
           <div class="md:w-1/2 p-8 flex justify-center items-center bg-gray-50">
             <img
               src="img/wechat-qr.png"
@@ -345,7 +404,6 @@
               class="w-56 h-56"
             />
           </div>
-          <!-- Address -->
           <div class="md:w-1/2 p-8">
             <h3 class="text-xl font-bold mb-4">Our Address</h3>
             <p class="text-gray-700 mb-8">
@@ -390,15 +448,25 @@
       </div>
     </footer>
 
-    <!-- ───────── SMOOTH SCROLL ───────── -->
+    <!-- Alpine JS for the hamburger toggle -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+      defer
+    ></script>
+
+    <!-- Smooth-scroll script -->
     <script>
       document.querySelectorAll('a[href^="#"]').forEach((a) => {
         a.addEventListener("click", (e) => {
           const href = a.getAttribute("href");
           if (href.length > 1) {
             e.preventDefault();
-            const t = document.querySelector(href);
-            t && window.scrollTo({ top: t.offsetTop - 80, behavior: "smooth" });
+            const target = document.querySelector(href);
+            target &&
+              window.scrollTo({
+                top: target.offsetTop - 80,
+                behavior: "smooth",
+              });
           }
         });
       });
