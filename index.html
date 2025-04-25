@@ -52,14 +52,12 @@
       <div
         class="container mx-auto px-6 py-3 flex items-center justify-between relative"
       >
-        <!-- Logo -->
         <img
           src="img/logo.png"
           alt="Through It All logo"
           class="w-20 md:w-36 h-auto"
         />
 
-        <!-- Desktop nav -->
         <nav
           class="hidden md:flex flex-1 justify-evenly text-xl md:text-2xl font-medium ml-10"
         >
@@ -71,7 +69,6 @@
           <a href="#contact" class="hover:text-gray-900">Contact</a>
         </nav>
 
-        <!-- Hamburger -->
         <button
           class="md:hidden focus:outline-none"
           @click="open = !open"
@@ -108,7 +105,6 @@
           </svg>
         </button>
 
-        <!-- Mobile dropdown -->
         <nav
           x-show="open"
           x-cloak
@@ -128,7 +124,8 @@
     </header>
 
     <!-- ───────── HERO ───────── -->
-    <section id="home" class="pt-36 md:pt-24 hero-gradient">
+    <!-- pt-36 → pt-28  (mobile) -->
+    <section id="home" class="pt-28 md:pt-24 hero-gradient">
       <div
         class="container mx-auto px-6 py-16 md:py-24 flex flex-col md:flex-row items-center"
       >
@@ -292,7 +289,7 @@
         <div
           class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-5xl mx-auto"
         >
-          <!-- Reason cards -->
+          <!-- Reasons cards (unchanged) -->
           <div class="text-center">
             <div
               class="bg-gray-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"
@@ -414,18 +411,16 @@
       </div>
     </section>
 
-    <!-- ───────── FOOTER (updated) ───────── -->
+    <!-- ───────── FOOTER ───────── -->
     <footer class="bg-black text-white">
       <div class="container mx-auto px-6 py-8">
         <div class="flex flex-col md:flex-row justify-between items-center">
-          <!-- Logo -->
           <img
             src="img/logo-white.png"
             alt="Through It All logo"
             class="w-20 md:w-28 h-auto mb-4 md:mb-0"
           />
 
-          <!-- Footer nav (inline + small on mobile) -->
           <nav
             class="flex flex-row flex-wrap justify-center items-center text-xs md:text-2xl font-medium space-x-4"
           >
