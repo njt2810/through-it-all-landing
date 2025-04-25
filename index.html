@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Through It All Pte. Ltd.</title>
 
-    <!-- Tailwind CDN -->
+    <!-- Tailwind CSS (CDN) -->
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
       rel="stylesheet"
@@ -44,7 +44,7 @@
   </head>
 
   <body>
-    <!-- ─────────────────────── HEADER ─────────────────────── -->
+    <!-- ─────────────── HEADER ─────────────── -->
     <header class="fixed w-full bg-white header-shadow z-50">
       <div
         class="container mx-auto px-6 py-3 flex items-center justify-between"
@@ -70,7 +70,7 @@
       </div>
     </header>
 
-    <!-- ─────────────────────── HERO ─────────────────────── -->
+    <!-- ─────────────── HERO ─────────────── -->
     <section id="home" class="pt-24 hero-gradient">
       <div
         class="container mx-auto px-6 py-16 md:py-24 flex flex-col md:flex-row items-center"
@@ -98,7 +98,7 @@
       </div>
     </section>
 
-    <!-- ─────────────────────── ABOUT ─────────────────────── -->
+    <!-- ─────────────── ABOUT ─────────────── -->
     <section id="about" class="py-16 bg-white">
       <div class="container mx-auto px-6">
         <h2 class="text-3xl font-bold mb-12 text-center">About Us</h2>
@@ -121,24 +121,256 @@
       </div>
     </section>
 
-    <!-- ─────────────────── PRODUCT CATEGORIES ─────────────────── -->
-    <!-- (unchanged content trimmed for brevity – keep your existing cards) -->
+    <!-- ─────────── PRODUCT CATEGORIES ─────────── -->
+    <section id="categories" class="py-16 bg-gray-50">
+      <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold mb-12 text-center">Product Categories</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Home & Kitchen -->
+          <div
+            class="category-card bg-white rounded-lg overflow-hidden shadow-md"
+          >
+            <img
+              src="img/home-kitchen.jpg"
+              alt="Home & Kitchen"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-3">Home &amp; Kitchen</h3>
+              <ul class="text-gray-700 space-y-2">
+                <li>• Kitchen gadgets</li>
+                <li>• Home organisation</li>
+                <li>• Home décor</li>
+                <li>• Smart-home accessories</li>
+              </ul>
+            </div>
+          </div>
+          <!-- Baby & Maternity -->
+          <div
+            class="category-card bg-white rounded-lg overflow-hidden shadow-md"
+          >
+            <img
+              src="img/baby.jpg"
+              alt="Baby & Maternity"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-3">Baby &amp; Maternity</h3>
+              <ul class="text-gray-700 space-y-2">
+                <li>• Toys &amp; games for babies</li>
+                <li>• Baby care essentials</li>
+                <li>• Baby accessories</li>
+                <li>• Child safety products</li>
+              </ul>
+            </div>
+          </div>
+          <!-- Fashion Accessories -->
+          <div
+            class="category-card bg-white rounded-lg overflow-hidden shadow-md"
+          >
+            <img
+              src="img/fashion.jpg"
+              alt="Fashion Accessories"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-3">Fashion Accessories</h3>
+              <ul class="text-gray-700 space-y-2">
+                <li>• Trendy accessories</li>
+                <li>• Wearables</li>
+                <li>• Seasonal fashion items</li>
+              </ul>
+            </div>
+          </div>
+          <!-- Home Textiles -->
+          <div
+            class="category-card bg-white rounded-lg overflow-hidden shadow-md"
+          >
+            <img
+              src="img/textiles.jpg"
+              alt="Home Textiles"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-3">Home Textiles</h3>
+              <ul class="text-gray-700 space-y-2">
+                <li>• Bed &amp; bath textiles</li>
+                <li>• Decorative textiles</li>
+                <li>• Functional textile products</li>
+              </ul>
+            </div>
+          </div>
+          <!-- Outdoor & Adventure -->
+          <div
+            class="category-card bg-white rounded-lg overflow-hidden shadow-md"
+          >
+            <img
+              src="img/outdoor.jpg"
+              alt="Outdoor & Adventure"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-3">Outdoor &amp; Adventure</h3>
+              <ul class="text-gray-700 space-y-2">
+                <li>• EDC items</li>
+                <li>• Camping essentials</li>
+                <li>• Outdoor equipment</li>
+                <li>• Travel accessories</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <!-- ─────────────────────── CONTACT ─────────────────────── -->
-    <!-- (content unchanged) -->
+    <!-- ─────────────── WHY PARTNER WITH US ─────────────── -->
+    <section id="why" class="py-16 bg-white">
+      <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold mb-12 text-center">
+          Why Partner With Us
+        </h2>
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-5xl mx-auto"
+        >
+          <!-- Card 1 -->
+          <div class="text-center">
+            <div
+              class="bg-gray-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <svg
+                class="w-8 h-8"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"
+                />
+              </svg>
+            </div>
+            <h3 class="font-bold text-lg mb-2">Market-Focused Selection</h3>
+            <p class="text-gray-700">
+              Products selected for market demand and trends
+            </p>
+          </div>
+          <!-- Card 2 -->
+          <div class="text-center">
+            <div
+              class="bg-gray-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <svg
+                class="w-8 h-8"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                />
+              </svg>
+            </div>
+            <h3 class="font-bold text-lg mb-2">Quality Assurance</h3>
+            <p class="text-gray-700">Commitment to strict product standards</p>
+          </div>
+          <!-- Card 3 -->
+          <div class="text-center">
+            <div
+              class="bg-gray-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <svg
+                class="w-8 h-8"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M13 10V3L4 14h7v7l9-11h-7z"
+                />
+              </svg>
+            </div>
+            <h3 class="font-bold text-lg mb-2">Efficient Distribution</h3>
+            <p class="text-gray-700">
+              Streamlined supply chain &amp; logistics
+            </p>
+          </div>
+          <!-- Card 4 -->
+          <div class="text-center">
+            <div
+              class="bg-gray-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <svg
+                class="w-8 h-8"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
+                />
+              </svg>
+            </div>
+            <h3 class="font-bold text-lg mb-2">Innovation Focus</h3>
+            <p class="text-gray-700">
+              Constantly sourcing cutting-edge products
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <!-- ─────────────────────── FOOTER ─────────────────────── -->
+    <!-- ─────────────── CONTACT ─────────────── -->
+    <section id="contact" class="py-16 bg-gray-50">
+      <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold mb-12 text-center">Contact Us</h2>
+        <div
+          class="max-w-4xl mx-auto bg-white rounded-lg shadow-lg overflow-hidden md:flex"
+        >
+          <!-- QR -->
+          <div class="md:w-1/2 p-8 flex justify-center items-center bg-gray-50">
+            <img
+              src="img/wechat-qr.png"
+              alt="WeChat QR Code"
+              class="w-56 h-56"
+            />
+          </div>
+          <!-- Address -->
+          <div class="md:w-1/2 p-8">
+            <h3 class="text-xl font-bold mb-4">Our Address</h3>
+            <p class="text-gray-700 mb-8">
+              160 Robinson Road, #14-04<br />Singapore Business Federation
+              Center<br />Singapore&nbsp;(068914)
+            </p>
+            <h3 class="text-xl font-bold mb-2">WeChat</h3>
+            <p class="text-gray-700">Scan the QR code to connect with us.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─────────────── FOOTER ─────────────── -->
     <footer class="bg-black text-white">
       <div class="container mx-auto px-6 py-8">
         <div class="flex flex-col md:flex-row justify-between items-center">
-          <!-- Footer logo only -->
+          <!-- Footer logo -->
           <img
             src="img/logo-white.png"
             alt="Through It All logo"
             class="w-28 h-auto mb-4 md:mb-0"
           />
 
-          <!-- Evenly-spaced footer nav -->
+          <!-- Evenly spaced footer nav -->
           <nav
             class="flex-1 md:flex justify-evenly space-y-4 md:space-y-0 text-sm"
           >
@@ -158,15 +390,15 @@
       </div>
     </footer>
 
-    <!-- ────────────────────── SMOOTH SCROLL ────────────────────── -->
+    <!-- ─────────────── SMOOTH SCROLL ─────────────── -->
     <script>
-      document.querySelectorAll('a[href^="#"]').forEach((a) => {
-        a.addEventListener("click", (e) => {
-          const href = a.getAttribute("href");
+      document.querySelectorAll('a[href^=\"#\"]').forEach((a) => {
+        a.addEventListener(\"click\", (e) => {
+          const href = a.getAttribute(\"href\");
           if (href.length > 1) {
             e.preventDefault();
             const t = document.querySelector(href);
-            t && window.scrollTo({ top: t.offsetTop - 80, behavior: "smooth" });
+            t && window.scrollTo({ top: t.offsetTop - 80, behavior: \"smooth\" });
           }
         });
       });
